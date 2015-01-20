@@ -87,7 +87,7 @@ PICKLE_RECEIVER_INTERFACE = <%= scope.lookupvar('graphite::gr_pickle_receiver_in
 PICKLE_RECEIVER_PORT = <%= scope.lookupvar('graphite::gr_pickle_receiver_port') %>
 
 # Set to false to disable logging of successful connections
-LOG_LISTENER_CONNECTIONS = True
+LOG_LISTENER_CONNECTIONS = False
 
 # Per security concerns outlined in Bug #817247 the pickle receiver
 # will use a more secure and slightly less efficient unpickler.
@@ -107,7 +107,7 @@ USE_FLOW_CONTROL = True
 # degrade performance if logging on the same volume as the whisper data is stored.
 LOG_UPDATES = False
 LOG_CACHE_HITS = False
-LOG_CACHE_QUEUE_SORTS = True
+LOG_CACHE_QUEUE_SORTS = False
 
 # The thread that writes metrics to disk can use on of the following strategies
 # determining the order in which metrics are removed from cache and flushed to
@@ -241,7 +241,7 @@ PICKLE_RECEIVER_INTERFACE = <%= scope.lookupvar('graphite::gr_relay_pickle_inter
 PICKLE_RECEIVER_PORT = <%= scope.lookupvar('graphite::gr_relay_pickle_port') %>
 
 # Set to false to disable logging of successful connections
-LOG_LISTENER_CONNECTIONS = True
+LOG_LISTENER_CONNECTIONS = False
 
 # Carbon-relay has several options for metric routing controlled by RELAY_METHOD
 #
