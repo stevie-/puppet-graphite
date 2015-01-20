@@ -18,11 +18,11 @@ class graphite::params {
   $txamqp_pkg         = 'txAMQP'
   $txamqp_ver         = '0.4'
   $graphite_pkg       = 'graphite-web'
-  $graphite_ver       = '0.9.12'
+  $graphite_ver       = '0.9.13'
   $carbon_pkg         = 'carbon'
-  $carbon_ver         = '0.9.12'
+  $carbon_ver         = '0.9.13'
   $whisper_pkg        = 'whisper'
-  $whisper_ver        = '0.9.12'
+  $whisper_ver        = '0.9.13'
 
   $whisper_dl_url = "http://github.com/graphite-project/whisper/archive/${::graphite::params::whisper_ver}.tar.gz"
   $whisper_dl_loc = "${build_dir}/whisper-${::graphite::params::whisper_ver}"
