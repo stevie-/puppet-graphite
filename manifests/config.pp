@@ -81,21 +81,9 @@ class graphite::config inherits graphite::params {
       '/opt/graphite/storage/log/carbon-cache':
         ensure  => directory,
         group   => $::graphite::gr_group,
-        mode    => '4755',
+        mode    => '0755',
         owner   => $::graphite::gr_user,
         require => Exec['Chown graphite for web user'];
-    }
-
-    # carbon relay log dir
-    if $::graphite::gr_enable_carbon_relay {
-      file {
-       '/opt/graphite/storage/log/carbon-relay':
-          ensure  => directory,
-          group   => $::graphite::gr_group,
-          mode    => '4755',
-          owner   => $::graphite::gr_user,
-          require => Exec['Chown graphite for web user'];
-      }
     }
   }
 
